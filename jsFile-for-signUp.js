@@ -31,7 +31,8 @@ $(document).ready(function (e) {
 
         if ($("input[name='default-radio']:checked").val() == 'tutor') {
             console.log($("input[name='default-radio']:checked").val());
-            $('#hidden-name-gender').setAttribute('value', '');
+            document.getElementById('nameForTutor').value = "";
+            // document.getElementById('colorText').value = "";
             $('#hidden-name-gender').css("display", "inline-flex");
             $('#hidden-name-gender').css("margin-top", "0");
             $('#shown-name').css("display", "none");

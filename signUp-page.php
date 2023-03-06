@@ -295,9 +295,10 @@
                         <hr
                             class="h-px my-8 mb-14 bg-teal-600 border-2 border-yellow-300 dark:bg-teal-600 w-10/12 mx-auto">
 
+                        <!-- radio container -->
                         <div class="flex gap-12 w-full mb-7">
                             <!-- radio -->
-                            <div class="flex items-center border rounded-full px-5 py-4 w-[35%]  space-x-3">
+                            <div class="flex items-center border rounded-full px-5 py-4 w-[35%] space-x-3">
                                 <input id="tutor-radio" type="radio" value="tutor" name="default-radio"
                                     class="w-4 h-4 text-teal-600 bg-gray-100 border-gray-300 hover:cursor-pointer focus:ring-teal-600 dark:focus:ring-teal-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                 <label for="tutor-radio" class="ml-2 font-medium text-gray-600 text-xl">As Tutor</label>
@@ -330,7 +331,7 @@
                                             Name <span class="text-red-600">*</span></p>
                                         <input placeholder="John" type="text" id="nameForTutor" name="nameForTutor" value="1" class="border placeholder-gray-400 focus:outline-none
                                         focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white
-                                        border-gray-300 rounded-md" required />
+                                        border-gray-300 rounded-md" required>
                                     </div>
                                     <div class="relative w-2/4">
                                         <p
