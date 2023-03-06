@@ -13,7 +13,8 @@
     <script src="https://kit.fontawesome.com/d5c5f87881.js" crossorigin="anonymous"></script>
 
     <!-- flowbite -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" /> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css"  rel="stylesheet" />
 
 
     <!-- jquery -->
@@ -292,20 +293,19 @@
               relative z-10">
                         <p class="w-full text-4xl font-medium text-center leading-snug font-serif">Sign up for an
                             account</p>
-                        <hr
+                            <hr
                             class="h-px my-8 mb-14 bg-teal-600 border-2 border-yellow-300 dark:bg-teal-600 w-10/12 mx-auto">
-
                         <!-- radio container -->
                         <div class="flex gap-12 w-full mb-7">
                             <!-- radio -->
                             <div class="flex items-center border rounded-full px-5 py-4 w-[35%] space-x-3">
-                                <input id="tutor-radio" type="radio" value="tutor" name="default-radio"
+                                <input type="radio" value="tutor" name="default-radio"
                                     class="w-4 h-4 text-teal-600 bg-gray-100 border-gray-300 hover:cursor-pointer focus:ring-teal-600 dark:focus:ring-teal-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                 <label for="tutor-radio" class="ml-2 font-medium text-gray-600 text-xl">As Tutor</label>
                             </div>
                             <!-- radio -->
                             <div class="flex items-center border rounded-full px-5 py-4 w-[35%]  space-x-3">
-                                <input checked id="gurdian-radio" type="radio" value="gurdian" name="default-radio"
+                                <input checked type="radio" value="gurdian" name="default-radio"
                                     class="w-4 h-4 text-teal-600 bg-gray-100 border-gray-300 hover:cursor-pointer focus:ring-teal-600 dark:focus:ring-teal-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                 <label for="gurdian-radio" class="ml-2 font-medium text-gray-600 text-xl">As
                                     Gurdian</label>
@@ -313,7 +313,6 @@
                         </div>
                         <!-- radio container end -->
                         <div class="w-full mt-6 mr-0 mb-0 ml-0 relative">
-
 
                             <form id="form" method="post" enctype="multipart/form-data" class="space-y-8">
                                 <div id="shown-name" class="relative w-full">
@@ -353,7 +352,6 @@
                                                 <label for="female-radio"
                                                     class="ml-2 text-base text-gray-600">Female</label>
                                             </div>
-
                                         </div>
                                     </div>
                                 </div>

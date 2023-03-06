@@ -32,13 +32,13 @@ $(document).ready(function (e) {
         if ($("input[name='default-radio']:checked").val() == 'tutor') {
             console.log($("input[name='default-radio']:checked").val());
             document.getElementById('nameForTutor').value = "";
-            // document.getElementById('colorText').value = "";
             $('#hidden-name-gender').css("display", "inline-flex");
             $('#hidden-name-gender').css("margin-top", "0");
             $('#shown-name').css("display", "none");
         }
         else if ($("input[name='default-radio']:checked").val() == 'gurdian') {
             console.log($("input[name='default-radio']:checked").val());
+            document.getElementById('nameForGurdian').value = "";
             $('#hidden-name-gender').css("display", "none");
             $('#shown-name').css("display", "inline-flex");
         }
