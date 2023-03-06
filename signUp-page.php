@@ -12,11 +12,14 @@
     <!-- font awesome icon -->
     <script src="https://kit.fontawesome.com/d5c5f87881.js" crossorigin="anonymous"></script>
 
+    <!-- flowbite -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
+
 
     <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.js" 
-    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script> 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>     
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!--END jquery cdn -->
 
 </head>
@@ -289,19 +292,69 @@
               relative z-10">
                         <p class="w-full text-4xl font-medium text-center leading-snug font-serif">Sign up for an
                             account</p>
+                        <hr
+                            class="h-px my-8 mb-14 bg-teal-600 border-2 border-yellow-300 dark:bg-teal-600 w-10/12 mx-auto">
+
+                        <div class="flex gap-12 w-full mb-7">
+                            <!-- radio -->
+                            <div class="flex items-center border rounded-full px-5 py-4 w-[35%]  space-x-3">
+                                <input id="tutor-radio" type="radio" value="tutor" name="default-radio"
+                                    class="w-4 h-4 text-teal-600 bg-gray-100 border-gray-300 hover:cursor-pointer focus:ring-teal-600 dark:focus:ring-teal-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                <label for="tutor-radio" class="ml-2 font-medium text-gray-600 text-xl">As Tutor</label>
+                            </div>
+                            <!-- radio -->
+                            <div class="flex items-center border rounded-full px-5 py-4 w-[35%]  space-x-3">
+                                <input checked id="gurdian-radio" type="radio" value="gurdian" name="default-radio"
+                                    class="w-4 h-4 text-teal-600 bg-gray-100 border-gray-300 hover:cursor-pointer focus:ring-teal-600 dark:focus:ring-teal-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                <label for="gurdian-radio" class="ml-2 font-medium text-gray-600 text-xl">As
+                                    Gurdian</label>
+                            </div>
+                        </div>
+                        <!-- radio container end -->
                         <div class="w-full mt-6 mr-0 mb-0 ml-0 relative">
 
-                            <form id="form" method="post" enctype="multipart/form-data" class="space-y-8">
-                                <div class="relative">
 
+                            <form id="form" method="post" enctype="multipart/form-data" class="space-y-8">
+                                <div id="shown-name" class="relative w-full">
                                     <p
                                         class="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600 absolute">
                                         Name <span class="text-red-600">*</span></p>
+                                    <input placeholder="John" type="text" id="nameForGurdian" name="nameForGurdian" class="border placeholder-gray-400 focus:outline-none
+                                        focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white
+                                        border-gray-300 rounded-md" required />
+                                </div>
+                                <div id="hidden-name-gender" class="flex justify-between gap-5 w-full hidden">
+                                    <div class="relative w-2/4">
+                                        <p
+                                            class="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600 absolute">
+                                            Name <span class="text-red-600">*</span></p>
+                                        <input placeholder="John" type="text" id="nameForTutor" name="nameForTutor" value="1" class="border placeholder-gray-400 focus:outline-none
+                                        focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white
+                                        border-gray-300 rounded-md" required />
+                                    </div>
+                                    <div class="relative w-2/4">
+                                        <p
+                                            class="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600 absolute">
+                                            Gender <span class="text-red-600">*</span>
+                                        </p>
+                                        <div class="flex justify-between border placeholder-gray-400 focus:outline-none
+                                        focus:border-black w-full pt-4 pr-5 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white
+                                        border-gray-300 rounded-md">
+                                            <div>
+                                                <input id="male-radio" type="radio" value="male" name="gender-radio"
+                                                    class="text-teal-600 bg-gray-100 border-gray-300 hover:cursor-pointer focus:ring-teal-600 dark:focus:ring-teal-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                <label for="male-radio"
+                                                    class="ml-2 text-base text-gray-600">Male</label>
+                                            </div>
+                                            <div>
+                                                <input id="female-radio" type="radio" value="female" name="gender-radio"
+                                                    class="text-teal-600 bg-gray-100 border-gray-300 hover:cursor-pointer focus:ring-teal-600 dark:focus:ring-teal-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                <label for="female-radio"
+                                                    class="ml-2 text-base text-gray-600">Female</label>
+                                            </div>
 
-                                    <input placeholder="John" type="text" id="name" class="border placeholder-gray-400 focus:outline-none
-                                focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white
-                                border-gray-300 rounded-md" required />
-
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="flex gap-5">
@@ -309,7 +362,8 @@
                                         <p
                                             class="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600 absolute">
                                             Mobile <span class="text-red-600">*</span></p>
-                                        <input placeholder="(+88)01234567891" type="text" class="border placeholder-gray-400 focus:outline-none
+                                        <input placeholder="(+88)01234567891" type="text" id="mobile" name="mobile"
+                                            class="border placeholder-gray-400 focus:outline-none
                                 focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white
                                 border-gray-300 rounded-md" required />
                                     </div>
@@ -318,7 +372,7 @@
                                         <p
                                             class="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600 absolute">
                                             Email <span class="text-red-600">*</span></p>
-                                        <input placeholder="123@ex.com" type="text" class="border placeholder-gray-400 focus:outline-none
+                                        <input placeholder="123@ex.com" type="text" id="email" name="email" class="border placeholder-gray-400 focus:outline-none
                                 focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white
                                 border-gray-300 rounded-md" required />
                                     </div>
@@ -330,7 +384,7 @@
                                         Password
                                         <span class="text-red-600">*</span>
                                     </p>
-                                    <input placeholder="Password" type="password" class="border placeholder-gray-400 focus:outline-none
+                                    <input placeholder="Password" type="password" id="pass" name="pass" class="border placeholder-gray-400 focus:outline-none
                                                                         focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white
                                                                         border-gray-300 rounded-md" required />
                                     <i class="fa-solid fa-eye relative -top-10 left-[500px] hover:cursor-pointer shown"
@@ -344,7 +398,8 @@
                                         Confirm Password
                                         <span class="text-red-600">*</span>
                                     </p>
-                                    <input placeholder="Password" type="password" id="conPass" class="border placeholder-gray-400 focus:outline-none
+                                    <input placeholder="Password" type="password" id="conPass" name="conPass"
+                                        id="conPass" class="border placeholder-gray-400 focus:outline-none
                                                                         focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white
                                                                         border-gray-300 rounded-md" required />
                                     <i class="fa-solid fa-eye relative -top-10 left-[500px] hover:cursor-pointer shown"
@@ -385,8 +440,23 @@
                                 <div class="relative">
                                     <input type="submit"
                                         class="w-full inline-block pt-4 pr-5 pb-4 pl-5 text-xl font-medium text-center text-white bg-teal-600
-                                    rounded-lg transition duration-200 hover:bg-yellow-300 hover:text-black hover:cursor-pointer ease"
+                                        rounded-lg transition duration-200 hover:bg-yellow-300 hover:text-black hover:cursor-pointer ease"
                                         value="Sign Up" />
+                                    <!-- spinner -->
+                                    <div role="status" id="hidden" class="hidden">
+                                        <svg aria-hidden="true"
+                                            class="inline w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-green-500"
+                                            viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                                                fill="currentColor" />
+                                            <path
+                                                d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                                                fill="currentFill" />
+                                        </svg>
+                                        <span class="sr-only"></span>
+                                    </div>
+                                    <!-- spinner END -->
 
                                 </div>
                             </form>
@@ -578,9 +648,14 @@
     </div>
 
 
+    <!-- flowbite -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+
     <!-- js -->
     <script src="jsFile-for-signUp.js"></script>
     <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/script-name.js"></script>
+
+
 </body>
 
 </html>

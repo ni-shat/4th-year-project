@@ -39,6 +39,7 @@
                 Sign In
             </label>
 
+
             <!-- Put this part before tag -->
             <input type="checkbox" id="my-modal-3" class="modal-toggle" />
             <div class="modal p-0">
@@ -184,7 +185,7 @@
                                 </a>
                                 <p class="text-base text-slate-500">
                                     Not a member yet?
-                                    <a href="javascript:void(0)" class="text-teal-800 font-semibold hover:underline">
+                                    <a href="signUp-page.php" class="text-teal-800 font-semibold hover:underline">
                                         Sign Up
                                     </a>
                                 </p>
@@ -361,6 +362,9 @@
 
         </section>
     </main>
+
+
+   
 </body>
 
 </html>
